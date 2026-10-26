@@ -1,0 +1,26 @@
+*{box-sizing:border-box}
+:root{--paper:#eee7d8;--paper-dark:#d0c1a5;--ink:#40382d;--muted:#756a57;--accent:#7c332d}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+.site-header{text-align:center;padding:clamp(2.5rem,9vw,5rem) 1rem 2rem}
+.eyebrow{letter-spacing:.2em;font-size:.75rem;color:var(--muted)}
+h1{font-size:clamp(2rem,7vw,4rem);margin:.4em 0}
+.intro{color:var(--muted);line-height:1.7}
+.episode-list{width:min(46rem,92vw);margin:0 auto 4rem;display:grid;gap:1rem}
+.episode-card{display:grid;grid-template-columns:1fr auto;gap:.45rem 1rem;padding:1.25rem 1.3rem;border:1px solid var(--paper-dark);background:rgba(255,255,255,.2);color:var(--ink);text-decoration:none;transition:background .15s,transform .15s}
+.episode-card:hover{background:rgba(255,255,255,.55);transform:translateY(-2px)}
+.episode-number{grid-column:1/-1;color:var(--muted);font-size:.75rem;letter-spacing:.15em}
+.episode-title{font-size:1.1rem;font-weight:bold}
+.episode-arrow{align-self:center;color:var(--accent);white-space:nowrap}
+footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.8rem}
+.reader-page{min-height:100vh;background:#191816;color:#f5f0e7}
+.reader-header{display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.8rem 1rem;background:#292722;font: .9rem system-ui,sans-serif}
+.reader-header a,.reader-bottom a,.episode-nav a{color:#e4c99b;text-decoration:none}
+.reader{min-height:calc(100vh - 160px);display:flex;align-items:center;justify-content:center;position:relative;padding:.5rem;touch-action:pan-y}
+#comic-page{display:block;max-width:100%;max-height:calc(100vh - 180px);object-fit:contain;user-select:none;-webkit-user-drag:none}
+.page-button{position:fixed;top:50%;transform:translateY(-50%);z-index:2;border:0;border-radius:50%;width:2.5rem;height:2.5rem;background:#eee7d8;color:#292722;font-size:2rem;cursor:pointer}
+.page-button:disabled{opacity:.25}.page-button.prev{left:.5rem}.page-button.next{right:.5rem}
+.reader-bottom,.episode-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.8rem;padding:.5rem}
+.reader-bottom button{border:1px solid #777064;background:#292722;color:#f5f0e7;padding:.55rem .8rem;cursor:pointer}
+.episode-nav{justify-content:space-between;padding:.8rem 1rem}
+.reader-note{text-align:center;color:#bdb5a6;font: .8rem system-ui,sans-serif;padding:0 1rem 1rem}
+@media(max-width:480px){.reader-header{font-size:.76rem}.reader{padding:.2rem}#comic-page{max-height:calc(100dvh - 185px)}.page-button{width:2.1rem;height:2.1rem;font-size:1.6rem}}
